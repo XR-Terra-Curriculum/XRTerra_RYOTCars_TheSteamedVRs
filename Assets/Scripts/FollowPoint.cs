@@ -10,7 +10,7 @@ public class FollowPoint : MonoBehaviour
     public float physicMoveSpeed;
     [Tooltip("Transform of current seek target")]
     public Transform target;
-    [Tooltip("Higher number results in earlier size change during travel")]
+    [Tooltip("Lower number results in earlier size change during travel, 0 would be instant change")]
     public float scaleFactor;
     [Tooltip("Speed at which target rotation is matched")]
     public float turnSpeed;
@@ -124,7 +124,7 @@ public class FollowPoint : MonoBehaviour
             ScaleMax = _originalScale.x;
         }
         _newScaleX = Mathf.Clamp(
-            (target.transform.localScale.x / _currDist * scaleFactor),
+            (target.transform.localScale.x - _currDist * scaleFactor),
             ScaleMin,
             ScaleMax);
 
@@ -140,7 +140,7 @@ public class FollowPoint : MonoBehaviour
             ScaleMax = _originalScale.y;
         }
         _newScaleY = Mathf.Clamp(
-            (target.transform.localScale.y / _currDist * scaleFactor),
+            (target.transform.localScale.y - _currDist * scaleFactor),
             ScaleMin,
             ScaleMax);
 
@@ -156,7 +156,7 @@ public class FollowPoint : MonoBehaviour
             ScaleMax = _originalScale.z;
         }
         _newScaleZ = Mathf.Clamp(
-            (target.transform.localScale.z / _currDist * scaleFactor),
+            (target.transform.localScale.z - _currDist * scaleFactor),
             ScaleMin,
             ScaleMax);
 

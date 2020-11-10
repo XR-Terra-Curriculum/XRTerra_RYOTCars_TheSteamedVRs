@@ -24,7 +24,10 @@ public class RigidHome : MonoBehaviour
 
         if (other.tag == "Car")
         {
-            other.GetComponent<FollowPoint>().enabled = false;
+            if (other.GetComponent<FollowPoint>().home == gameObject.transform)
+            {
+                other.GetComponent<FollowPoint>().enabled = false;
+            }
         }
     }
 }
