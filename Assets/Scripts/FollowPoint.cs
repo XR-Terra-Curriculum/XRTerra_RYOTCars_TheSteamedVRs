@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class FollowPoint : MonoBehaviour
 {
@@ -60,6 +61,11 @@ public class FollowPoint : MonoBehaviour
     {
         if (GetComponent<Rigidbody>() != null)
             GetComponent<Rigidbody>().isKinematic = true;
+
+        if (GetComponent<XRGrabInteractable>() != null)
+        {
+            GetComponent<Collider>().enabled = false;
+        }
     }
 
     /// <summary>
@@ -71,15 +77,13 @@ public class FollowPoint : MonoBehaviour
         //establish trajectory
         _heading = target.position - transform.position;
 
-
+        RotateToTarget();
         //check to stop processing to save on performance, if the object is in place don't both replacing it
-        if (Vector3.Distance(transform.position, target.transform.position) > .001f)
+        if (Vector3.Distance(transform.position, target.transform.position) > .01f)
         {
-            
             MoveToTarget();
             ScaleToTarget();
         }
-        RotateToTarget();
     }
 
 
@@ -173,7 +177,23 @@ public class FollowPoint : MonoBehaviour
                 children[i].GetComponent<Joint>().connectedAnchor = _connectedAnchor[i];
                 children[i].GetComponent<Joint>().anchor = _anchor[i];
             }
+
+            //we also need to disable lights for any vehicle when
+            //it is not full size to avoid super bright tiny cars and save on performance
+            if (children[i].GetComponent<Light>() != null)
+            {
+                if(_newScaleX < .7f)
+                {
+                    children[i].GetComponent<Light>().enabled = false;
+                }
+                else
+                {
+                    children[i].GetComponent<Light>().enabled = true;
+                }
+            }
+
         }
+
     }
 
     /// <summary>
@@ -189,6 +209,11 @@ public class FollowPoint : MonoBehaviour
     {
         if(GetComponent<Rigidbody>() != null)
             GetComponent<Rigidbody>().isKinematic = false;
+
+        if (GetComponent<XRGrabInteractable>() != null)
+        {
+            GetComponent<Collider>().enabled = true;
+        }
     }
 
     /// <summary>
@@ -197,6 +222,7 @@ public class FollowPoint : MonoBehaviour
     public void SendHome()
     {
         SetTarget(home);
+        GetComponent<Collider>().enabled = true;
     }
 
     /// <summary>
