@@ -9,7 +9,9 @@
 /[Bb]uilds/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
-
+/[Aa]ssets/SharedModels/
+/[Aa]ssets/SteamVR/*/*
+/[Aa]ssets/SteamVR/Textures/workshop.png
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 
