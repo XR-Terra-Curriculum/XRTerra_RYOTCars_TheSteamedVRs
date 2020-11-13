@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - SceneryCar
+  - Car
+  - Building
+  - Tree
+  - Cloud
+  - Night
+  - Day
   layers:
   - Default
   - TransparentFX
@@ -41,4 +47,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Clock Text
+    uniqueID: 3743908567
     locked: 0
