@@ -4,22 +4,33 @@ using UnityEngine;
 
 public class ForestDayNight : MonoBehaviour
 {
+    [Tooltip("Link the forest environment to grab tree assets")]
     public GameObject forestEnvironment;
+    [Tooltip("Grab the directional light for color changes")]
     public Light directionalLight;
+    [Tooltip("Skybox for nighttime")]
     public Material skyboxNight;
+    [Tooltip("Skybox for daytime")]
     public Material skyboxDay;
-    private GameObject[] treeSprites;
-    private GameObject[] dayObjects;
+    [Tooltip("Ambient night sounds")]
     public AudioClip nightSound;
+    [Tooltip("Ambient day sounds")]
     public AudioClip daySound;
+    [Tooltip("This is currently unused")]
     public Material dayTrees;
+    [Tooltip("This is currently unused")]
     public Material nightTrees;
 
+    private GameObject[] treeSprites;
+    private GameObject[] dayObjects;
     private bool dayNight = true;
     // Start is called before the first frame update
     void Start()
     {
-        treeSprites = GameObject.FindGameObjectsWithTag("Tree");
+        //tree material change is not worth it
+        //treeSprites = GameObject.FindGameObjectsWithTag("Tree");
+
+        //grab all objects exclusive to day in an array, start on daytime
         dayObjects = GameObject.FindGameObjectsWithTag("Day");
         setDay();
     }
@@ -27,6 +38,8 @@ public class ForestDayNight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //debug code for change time on a keyboard
+        /*
         if (Input.GetKeyDown(KeyCode.R))
         {
             Debug.Log("Setting day");
@@ -37,8 +50,11 @@ public class ForestDayNight : MonoBehaviour
             Debug.Log("Setting night");
             setNight();
         }
+        */
     }
-
+    /// <summary>
+    /// Apply all color and object changes to simulate nighttime
+    /// </summary>
     public void setNight()
     {
         GetComponent<AudioSource>().clip = nightSound;
@@ -56,6 +72,9 @@ public class ForestDayNight : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Apply all color and object changes to simulate daytime
+    /// </summary>
     public void setDay()
     {
         GetComponent<AudioSource>().clip = daySound;
@@ -71,6 +90,7 @@ public class ForestDayNight : MonoBehaviour
             dayObjects[i].SetActive(true);
         }
 
+        //an attempt to change billboard tree material, too labor intensive and for not that much
         /*
         for (int i = 0; i < treeSprites.Length; i++)
         {
@@ -86,6 +106,7 @@ public class ForestDayNight : MonoBehaviour
 
     }
 
+    //swap to the opposite time
     public void toggleTime()
     {
         if (dayNight)

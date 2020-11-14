@@ -11,6 +11,8 @@ TagManager:
   - Cloud
   - Night
   - Day
+  - Showtime
+  - Home
   layers:
   - Default
   - TransparentFX

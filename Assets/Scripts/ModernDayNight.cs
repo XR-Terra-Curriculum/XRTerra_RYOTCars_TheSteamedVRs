@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class ModernDayNight : MonoBehaviour
 {
+    [Tooltip("Ambient day sound")]
     public AudioClip daySounds;
+    [Tooltip("Ambient night sound")]
     public AudioClip nightSounds;
+    [Tooltip("Grab all outdoor objects for changing")]
     public GameObject outDoorComponents;
+    [Tooltip("Directional light for color changes")]
     public Light directionalLight;
+    [Tooltip("Skybox to apply at night")]
     public Material skyboxNight;
+    [Tooltip("Skybox to use during the day")]
     public Material skyboxDay;
 
     private Light[] children;
@@ -21,6 +27,7 @@ public class ModernDayNight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //get arrays of all lights, buildings, clouds, trees and objects exclusively for nighttime
         children = outDoorComponents.GetComponentsInChildren<Light>();
         buildingSprites = GameObject.FindGameObjectsWithTag("Building");
         cloudSprites = GameObject.FindGameObjectsWithTag("Cloud");
@@ -32,6 +39,8 @@ public class ModernDayNight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //debug code to change time with keyboard
+        /*
         if (Input.GetKeyDown(KeyCode.R))
         {
             Debug.Log("Setting day");
@@ -42,8 +51,12 @@ public class ModernDayNight : MonoBehaviour
             Debug.Log("Setting night");
             setNight();
         }
+        */
     }
 
+    /// <summary>
+    /// all changes necessary to enable night environment
+    /// </summary>
     public void setNight()
     {
         GetComponent<AudioSource>().clip = nightSounds;
@@ -81,6 +94,9 @@ public class ModernDayNight : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// all changes necessary to enable day environment
+    /// </summary>
     public void setDay()
     {
         GetComponent<AudioSource>().clip = daySounds;
@@ -118,8 +134,10 @@ public class ModernDayNight : MonoBehaviour
         }
     }
 
+    //swap between times
     public void toggleTime()
     {
+        SalesmanController.instance.playSequence(6);
         if (dayNight)
         {
             setNight();

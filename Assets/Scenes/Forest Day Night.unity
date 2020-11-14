@@ -364,7 +364,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 535907558}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6575f27d13e9f0647a601d50b2456be9, type: 3}
+  m_Script: {fileID: 11500000, guid: 28ff75daec33fe54d901e8697d2863d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   forestEnvironment: {fileID: 1472298337}
@@ -373,8 +373,8 @@ MonoBehaviour:
   skyboxDay: {fileID: 2100000, guid: 01f4eb1c73693428d923f1520032e7f9, type: 2}
   nightSound: {fileID: 8300000, guid: 590c92805485a774d84c0335ff07d2c3, type: 3}
   daySound: {fileID: 8300000, guid: 25543244863d65141b115f8930f3707a, type: 3}
-  dayTrees: {fileID: 2100000, guid: 49a047f6fab4c994cb92aa690ba93401, type: 2}
-  nightTrees: {fileID: 2100000, guid: e4418971b9f383a4ba8388e531decf95, type: 2}
+  dayTrees: {fileID: 0}
+  nightTrees: {fileID: 0}
 --- !u!4 &535907560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6290197620449261701, guid: 71c8616c18d7f7246af53b33e37ca1bf,

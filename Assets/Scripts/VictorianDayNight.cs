@@ -4,24 +4,35 @@ using UnityEngine;
 
 public class VictorianDayNight : MonoBehaviour
 {
+    [Tooltip("Grab the victorian map prefab")]
     public GameObject victorianMap;
+    [Tooltip("directional light for color changes")]
     public Light directionalLight;
+    [Tooltip("skybox used for nighttime")]
     public Material skyboxNight;
+    [Tooltip("skybox used for daytime")]
     public Material skyboxDay;
-
+    [Tooltip("First fog object")]
     public GameObject fog1;
+    [Tooltip("Second fog object")]
     public GameObject fog2;
+    [Tooltip("Third fog object")]
     public GameObject fog3;
-    private Light[] children;
+    [Tooltip("Ambient day sounds")]
+    public AudioClip daySound;
+    [Tooltip("Ambient night sounds")]
+    public AudioClip nightSound;
 
+
+    private Light[] children;
     private bool dayNight = false;
 
-    public AudioClip daySound;
-    public AudioClip nightSound;
+    
 
     // Start is called before the first frame update
     void Start()
     {
+        //get all lamp lights and start on night
         children = victorianMap.GetComponentsInChildren<Light>();
         setNight();
     }
@@ -29,6 +40,8 @@ public class VictorianDayNight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //debug code to change day and night with keyboard
+        /*
         if (Input.GetKeyDown(KeyCode.R))
         {
             Debug.Log("Setting day");
@@ -39,8 +52,12 @@ public class VictorianDayNight : MonoBehaviour
             Debug.Log("Setting night");
             setNight();
         }
+        */
     }
 
+    /// <summary>
+    /// all color changes needed for night environment
+    /// </summary>
     public void setNight()
     {
         GetComponent<AudioSource>().clip = nightSound;
@@ -61,6 +78,9 @@ public class VictorianDayNight : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// all color changes needed for day environment
+    /// </summary>
     public void setDay()
     {
         GetComponent<AudioSource>().clip = daySound;
@@ -80,6 +100,9 @@ public class VictorianDayNight : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// swap between times
+    /// </summary>
     public void toggleTime()
     {
         if (dayNight)
@@ -90,7 +113,6 @@ public class VictorianDayNight : MonoBehaviour
         {
             setDay();
         }
-
         dayNight = !dayNight;
     }
 }
