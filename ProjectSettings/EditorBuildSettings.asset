@@ -5,9 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: 40726a64647f86f43b4b7ce00914afc0
+  - enabled: 1
+    path: Assets/Scenes/Production-Maps/Production- Persistent.unity
+    guid: 2436a72c24c464546ab9b406c3120439
+  - enabled: 1
+    path: Assets/Scenes/Production-Maps/Production- Dealership.unity
+    guid: 6ebe53bb8610e5540a2aec5398aa0751
+  - enabled: 1
+    path: Assets/Scenes/Production-Maps/Production- Forest.unity
+    guid: 645ab06d3f860194b81a00e74387243d
+  - enabled: 1
+    path: Assets/Scenes/Production-Maps/Production- Victorian.unity
+    guid: a78ed1d2756ff3b448285679411dfba1
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ef20afdfcdd80c7488a6c4597e4d4b49,
       type: 2}
