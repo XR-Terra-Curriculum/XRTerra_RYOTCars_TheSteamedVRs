@@ -2,8 +2,8 @@
 
 public class ButtonObject : MonoBehaviour
 {
-    public void LoadGame()
+    public void LoadVictorian()
     {
-        SceneLoader.Instance.LoadNewScene("Game");
+        SceneLoader.Instance.LoadNewScene("Production- Victorian");
     }
 }
