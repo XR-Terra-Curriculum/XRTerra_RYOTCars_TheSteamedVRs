@@ -14,6 +14,9 @@ public class SalesmanController : MonoBehaviour
     public NarrationSequence[] speechList;
     public static SalesmanController instance = null;
 
+    private bool queueNext;
+    private int recentSequence;
+    private int nextSequence;
     public bool mute = false;
     void Awake()
         {
@@ -37,6 +40,11 @@ public class SalesmanController : MonoBehaviour
     void Update()
     {
         
+        if (speechList[recentSequence].getActing() == false && queueNext)
+        {
+            forcePlayerSequence(nextSequence);
+            queueNext = false;
+        }
     }
 
     /// <summary>
@@ -56,6 +64,7 @@ public class SalesmanController : MonoBehaviour
             }
             StopAllCoroutines();
             speechList[num].playSequence(anim, voice);
+            recentSequence = num;
         }
     }
 
@@ -109,4 +118,19 @@ public class SalesmanController : MonoBehaviour
         mute = !mute;
     }
 
+
+    public void queueSequence(int num)
+    {
+        nextSequence = num;
+        queueNext = true;
+    }
+
+    public void queueLast()
+    {
+        
+        queueNext = true;
+        nextSequence = recentSequence;
+        playSequence(7);
+        Debug.Log(nextSequence);
+    }
 }

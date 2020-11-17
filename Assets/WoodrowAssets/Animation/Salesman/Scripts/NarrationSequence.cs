@@ -99,4 +99,9 @@ public class NarrationSequence : MonoBehaviour
         complete = false;
         playSequence(publicAnim, publicSpeaker);
     }
+
+    public bool getActing()
+    {
+        return acting;
+    }
 }
