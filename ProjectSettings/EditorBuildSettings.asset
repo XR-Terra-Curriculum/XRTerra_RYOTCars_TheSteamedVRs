@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Production-Maps/Production- Forest.unity
     guid: 645ab06d3f860194b81a00e74387243d
   - enabled: 1
-    path: Assets/Scenes/Production-Maps/Production- Victorian.unity
+    path: Assets/Scenes/Production Maps/Production - Victorian.unity
     guid: a78ed1d2756ff3b448285679411dfba1
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ef20afdfcdd80c7488a6c4597e4d4b49,
