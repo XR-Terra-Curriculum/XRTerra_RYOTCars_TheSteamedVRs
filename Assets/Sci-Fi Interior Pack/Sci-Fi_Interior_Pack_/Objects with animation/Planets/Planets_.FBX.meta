@@ -1,60 +1,63 @@
 fileFormatVersion: 2
-guid: 576010091d25d8a4788391d386d87df4
+guid: 5ad82e173e9d5654f8b78ab2a4e01330
+timeCreated: 1468318586
+licenseType: Store
 ModelImporter:
-  serializedVersion: 19301
-  internalIDToNameTable: []
-  externalObjects: {}
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Planet_1
+    100002: Planet_1_Layer_1
+    100004: Planet_1_Layer_2
+    100006: Planet_2
+    100008: //RootNode
+    400000: Planet_1
+    400002: Planet_1_Layer_1
+    400004: Planet_1_Layer_2
+    400006: Planet_2
+    400008: //RootNode
+    2300000: Planet_1_Layer_1
+    2300002: Planet_1_Layer_2
+    2300004: Planet_2
+    3300000: Planet_1_Layer_1
+    3300002: Planet_1_Layer_2
+    3300004: Planet_2
+    4300000: Planet_2
+    4300002: Planet_1_Layer_2
+    4300004: Planet_1_Layer_1
   materials:
-    materialImportMode: 1
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleCurves: 1
+    resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    importAnimatedCustomProperties: 0
-    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
-    useSRGBMaterialColor: 1
-    sortHierarchyByName: 1
-    importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
-    fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
+    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
-    preserveHierarchy: 0
-    skinWeightsMode: 0
-    maxBonesPerVertex: 4
-    minBoneWeight: 0.001
-    meshOptimizationFlags: -1
-    indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
@@ -64,14 +67,9 @@ ModelImporter:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
-    normalCalculationMode: 4
-    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
-    blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
-  referencedClips: []
   importAnimation: 1
+  copyAvatar: 0
   humanDescription:
-    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -81,16 +79,11 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
-    skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
-  avatarSetup: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
