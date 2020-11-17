@@ -98,6 +98,8 @@ public class VictorianDayNight : MonoBehaviour
             //turn off all the lights
             children[i].enabled = false;
         }
+
+        directionalLight.enabled = true;
     }
 
     /// <summary>
