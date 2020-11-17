@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Numerics;
 using UnityEditor.Experimental;
 using UnityEngine;
+using Quaternion = UnityEngine.Quaternion;
+using Vector3 = UnityEngine.Vector3;
 
 public class FollowPoint : MonoBehaviour
 {
@@ -36,6 +39,7 @@ public class FollowPoint : MonoBehaviour
     private float ScaleMin;
     private float ScaleMax;
 
+    private Vector3 colliderPos;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +60,11 @@ public class FollowPoint : MonoBehaviour
             {
                 children[i].GetComponent<Light>().enabled = false;
             }
+            //disable all child colliders until display time
+            if (children[i].GetComponent<Collider>() != null)
+            {
+                children[i].GetComponent<Collider>().enabled = false;
+            }
         }
 
         //Start the car at the scale, rotation and position of home
@@ -71,6 +80,9 @@ public class FollowPoint : MonoBehaviour
         {
             target = home;
         }
+
+        //re enable main collider
+        GetComponent<Collider>().enabled = true;
     }
 
     void OnEnable()
@@ -228,7 +240,12 @@ public class FollowPoint : MonoBehaviour
     /// </summary>
     public void SendHome()
     {
-        GetComponent<Collider>().enabled = true;
+        foreach (Collider box in GetComponentsInChildren<Collider>())
+        {
+            box.enabled = false;
+        }
+        GetComponent<AudioSource>().Stop();
+        GetComponent<BoxCollider>().enabled = true;
         SetTarget(home);
     }
 
@@ -237,7 +254,11 @@ public class FollowPoint : MonoBehaviour
     /// </summary>
     public void SendDisplay()
     {
-        GetComponent<Collider>().enabled = false;
+        foreach (Collider box in GetComponentsInChildren<Collider>())
+        {
+            box.enabled = true;
+        }
+        GetComponent<BoxCollider>().enabled = false;
         SetTarget(display);
     }
 

@@ -24,9 +24,14 @@ public class EngageDisplay : MonoBehaviour
         //if the object is a car and not currently following a point, turn on followpoint towards the display area
         if (other.tag == "Car" && other.GetComponent<FollowPoint>().enabled == false)
         {
-            other.GetComponent<Collider>().enabled = false;
+            foreach (Collider box in other.GetComponentsInChildren<Collider>())
+            {
+                box.enabled = true;
+            }
             other.GetComponent<FollowPoint>().enabled = true;
             other.GetComponent<FollowPoint>().SendDisplay();
+
+         
 
             //if there was a previous car displayed, send it home
             if (lastCar != null)
@@ -36,6 +41,11 @@ public class EngageDisplay : MonoBehaviour
 
             //store display car as new previous car
             lastCar = other.gameObject;
+
+            GetComponent<AudioSource>().clip = other.GetComponent<CarSounds>().engineStart;
+            GetComponent<AudioSource>().Play();
+            other.GetComponent<CarSounds>().playEngine();
+            
         }
 
     }
