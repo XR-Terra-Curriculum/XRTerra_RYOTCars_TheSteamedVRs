@@ -16,6 +16,7 @@ TagManager:
   - Red
   - Green
   - Blue
+  - Teleporation
   layers:
   - Default
   - TransparentFX
