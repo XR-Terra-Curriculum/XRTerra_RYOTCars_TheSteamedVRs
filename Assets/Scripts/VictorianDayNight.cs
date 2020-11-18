@@ -32,6 +32,7 @@ public class VictorianDayNight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SalesmanController.instance.playSequence(8);
         //get all lamp lights and start on night
         children = victorianMap.GetComponentsInChildren<Light>();
         setNight();
@@ -107,6 +108,7 @@ public class VictorianDayNight : MonoBehaviour
     /// </summary>
     public void toggleTime()
     {
+        SalesmanController.instance.playSequence(6);
         if (dayNight)
         {
             setNight();

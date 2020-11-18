@@ -27,6 +27,7 @@ public class ForestDayNight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SalesmanController.instance.playSequence(9);
         //tree material change is not worth it
         //treeSprites = GameObject.FindGameObjectsWithTag("Tree");
 
@@ -109,6 +110,7 @@ public class ForestDayNight : MonoBehaviour
     //swap to the opposite time
     public void toggleTime()
     {
+        SalesmanController.instance.playSequence(6);
         if (dayNight)
         {
             setNight();

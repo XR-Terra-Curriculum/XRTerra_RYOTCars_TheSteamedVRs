@@ -113,6 +113,7 @@ public class SpaceDayNight : MonoBehaviour
     //swap to the opposite time
     public void toggleTime()
     {
+        SalesmanController.instance.playSequence(6);
         if (dayNight == 2)
         {
             dayNight = 0;
