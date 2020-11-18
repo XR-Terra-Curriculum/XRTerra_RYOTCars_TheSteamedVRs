@@ -286,6 +286,22 @@ PrefabInstance:
       propertyPath: near clip plane
       value: 0.01
       objectReference: {fileID: 0}
+    - target: {fileID: 887488305, guid: fd82cdfcf7b26b747ad1040ac2b97322, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 887488305, guid: fd82cdfcf7b26b747ad1040ac2b97322, type: 3}
+      propertyPath: lineColor1.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 887488305, guid: fd82cdfcf7b26b747ad1040ac2b97322, type: 3}
+      propertyPath: lineColor1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 887488305, guid: fd82cdfcf7b26b747ad1040ac2b97322, type: 3}
+      propertyPath: lineColor1.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 370626151000941815, guid: fd82cdfcf7b26b747ad1040ac2b97322,
         type: 3}
       propertyPath: m_Name
@@ -339,7 +355,7 @@ PrefabInstance:
     - target: {fileID: 8389033462752065579, guid: fd82cdfcf7b26b747ad1040ac2b97322,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.45
+      value: 0.563
       objectReference: {fileID: 0}
     - target: {fileID: 8665599103162342543, guid: fd82cdfcf7b26b747ad1040ac2b97322,
         type: 3}
