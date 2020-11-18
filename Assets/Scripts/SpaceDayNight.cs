@@ -4,13 +4,9 @@ using UnityEngine;
 
 public class SpaceDayNight : MonoBehaviour
 {
-    [Tooltip("Link the forest environment to grab tree assets")]
-    public GameObject forestEnvironment;
     [Tooltip("Grab the directional light for color changes")]
     public Light directionalLight;
     [Tooltip("Grab the directional light for color changes")]
-    public Light directionalLightDown;
-    [Tooltip("Skybox for nighttime")]
     public Material skyboxNight;
     [Tooltip("Skybox for daytime")]
     public Material skyboxDay;
@@ -18,12 +14,14 @@ public class SpaceDayNight : MonoBehaviour
     public AudioClip nightSound;
     [Tooltip("Ambient day sounds")]
     public AudioClip daySound;
-    [Tooltip("This is currently unused")]
-    public Material dayTrees;
-    [Tooltip("This is currently unused")]
-    public Material nightTrees;
-    
+    [Tooltip("Ambient Ocean sounds")]
+    public AudioClip oceanSound;
+    [Tooltip("Ocean skybox")]
+    public Material skyboxOcean;
+
+
     private GameObject[] nightObjects;
+
 
     /// <summary>
     /// 0 is nightspace, 1 is day mars, 2 is ocean floor
@@ -36,7 +34,7 @@ public class SpaceDayNight : MonoBehaviour
         //treeSprites = GameObject.FindGameObjectsWithTag("Tree");
 
         //grab all objects exclusive to day in an array, start on daytime
-        nightObjects = GameObject.FindGameObjectsWithTag("Day");
+        nightObjects = GameObject.FindGameObjectsWithTag("Night");
         setNight();
     }
 
@@ -68,11 +66,11 @@ public class SpaceDayNight : MonoBehaviour
     public void setNight()
     {
         GetComponent<AudioSource>().clip = nightSound;
+        GetComponent<AudioSource>().volume = 1;
         GetComponent<AudioSource>().Play();
         RenderSettings.skybox = skyboxNight;
         RenderSettings.fog = false;
         directionalLight.color = new Color(0, 17 / 255f, 58 / 255f);
-        directionalLightDown.color = new Color(0, 17 / 255f, 58 / 255f);
         for (int i = 0; i < nightObjects.Length; i++)
         {
             nightObjects[i].SetActive(true);
@@ -84,19 +82,47 @@ public class SpaceDayNight : MonoBehaviour
     /// </summary>
     public void setDay()
     {
-       
+        GetComponent<AudioSource>().clip = daySound;
+        GetComponent<AudioSource>().volume = .2f;
+        GetComponent<AudioSource>().Play();
+        RenderSettings.skybox = skyboxDay;
+        RenderSettings.fog = true;
+        RenderSettings.fogColor = new Color(231/255f, 19/255f, 0/255f);
+        directionalLight.color = new Color(141/255f, 62 / 255f, 55 / 255f);
+        for (int i = 0; i < nightObjects.Length; i++)
+        {
+            nightObjects[i].SetActive(false);
+        }
 
     }
 
     public void setOcean()
     {
-       
+        GetComponent<AudioSource>().clip = oceanSound;
+        GetComponent<AudioSource>().volume = .6f;
+        GetComponent<AudioSource>().Play();
+        RenderSettings.skybox = skyboxOcean;
+        RenderSettings.fog = false;
+        directionalLight.color = new Color(0 / 255f, 83 / 255f, 108 / 255f);
+        for (int i = 0; i < nightObjects.Length; i++)
+        {
+            nightObjects[i].SetActive(false);
+        }
     }
 
     //swap to the opposite time
     public void toggleTime()
     {
-        dayNight++;
+        SalesmanController.instance.playSequence(6);
+        if (dayNight == 2)
+        {
+            dayNight = 0;
+        }
+        else
+        {
+            dayNight++;
+        }
+
         if (dayNight == 0)
         {
             setNight();
