@@ -53,6 +53,28 @@ public class SalesmanController : MonoBehaviour
     /// <param name="num"></param>
     public void playSequence(int num)
     {
+        if (num == 0)
+        {
+            ComputerText.instance.setIntro();
+        }
+        else if (num == 1)
+        {
+            ComputerText.instance.setSedan();
+        }
+        else if (num == 2)
+        {
+            ComputerText.instance.setSport();
+        }
+        else if (num == 4)
+        {
+            ComputerText.instance.setOld();
+        }
+        else if (num == 5)
+        {
+            ComputerText.instance.setFuture();
+        }
+
+
         if (!speechList[num].complete && !mute)
         {
             for (int i = 0; i < speechList.Length; i++)
