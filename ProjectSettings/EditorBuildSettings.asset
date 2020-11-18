@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Production-Maps/Production- Victorian.unity
     guid: afc46f5e831821a4e83126a92442fda1
+  - enabled: 1
+    path: Assets/Scenes/Production-Maps/Production - Space.unity
+    guid: cd06669e3badeb846bde07dbfeab9b60
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: ef20afdfcdd80c7488a6c4597e4d4b49,
       type: 2}

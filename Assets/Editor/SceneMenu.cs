@@ -21,6 +21,13 @@ public static class SceneMenu
         OpenScene("Production- Victorian");
     }
 
+
+    [MenuItem("Scenes/Space")]
+    public static void OpenSpace()
+    {
+        OpenScene("Production - Space");
+    }
+
     private static void OpenScene(string sceneName)
     {
         EditorSceneManager.OpenScene("Assets/Scenes/Production-Maps/Production- Persistent.unity", OpenSceneMode.Single);

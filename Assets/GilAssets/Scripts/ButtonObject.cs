@@ -16,7 +16,7 @@ public class ButtonObject : MonoBehaviour
                 SceneLoader.Instance.LoadNewScene("Production- Forest");
                 break;
             case 3:
-                SceneLoader.Instance.LoadNewScene("Production- Futuristic");
+                SceneLoader.Instance.LoadNewScene("Production - Space");
                 break;
             default:
                 SceneLoader.Instance.LoadNewScene("Production- Dealership");
