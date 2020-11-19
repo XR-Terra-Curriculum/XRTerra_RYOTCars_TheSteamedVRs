@@ -4172,7 +4172,7 @@ GameObject:
   - component: {fileID: 6076597903347328001}
   m_Layer: 0
   m_Name: CarBody
-  m_TagString: Untagged
+  m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4793,7 +4793,7 @@ GameObject:
   - component: {fileID: 6076597903882667833}
   - component: {fileID: 6076597903882667838}
   m_Layer: 0
-  m_Name: SportsCar
+  m_Name: Production SportsCar
   m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
