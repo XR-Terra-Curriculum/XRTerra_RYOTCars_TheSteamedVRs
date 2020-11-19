@@ -15,12 +15,16 @@ public class Paintball : MonoBehaviour
         positionToSave = paintBall.transform.position;
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Teleporation")
+        if (other.gameObject.tag == "Teleportation")
         {
-            Destroy(paintBall);
+            /*
+            Destroy(gameObject);
             Instantiate(paintBall, positionToSave, Quaternion.identity);
+            */
+            gameObject.transform.position = positionToSave;
+            gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0f,0f,0f);
         }
     }
 }

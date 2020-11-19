@@ -18,6 +18,8 @@ TagManager:
   - Blue
   - Teleporation
   - Car Body
+  - Paintball
+  - Teleportation
   layers:
   - Default
   - TransparentFX

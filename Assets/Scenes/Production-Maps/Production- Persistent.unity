@@ -380,6 +380,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blue Paintball
       objectReference: {fileID: 0}
+    - target: {fileID: 2991977491976256623, guid: d51c5330dfd11443ea2d93d9a26a6bab,
+        type: 3}
+      propertyPath: m_TagString
+      value: Paintball
+      objectReference: {fileID: 0}
     - target: {fileID: 5518377775352508401, guid: d51c5330dfd11443ea2d93d9a26a6bab,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -389,7 +394,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AttachTransform
       value: 
-      objectReference: {fileID: 475941287}
+      objectReference: {fileID: 0}
     - target: {fileID: 6804552455698982837, guid: d51c5330dfd11443ea2d93d9a26a6bab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -460,6 +465,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1880921405}
     m_Modifications:
+    - target: {fileID: 809375818123248774, guid: 4b6db2b6deaf6fd488b051cda996f23b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c394740994e3c494f9a70a7f09f4da49, type: 2}
+    - target: {fileID: 1577246106874724061, guid: 4b6db2b6deaf6fd488b051cda996f23b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c394740994e3c494f9a70a7f09f4da49, type: 2}
+    - target: {fileID: 3628496503059493886, guid: 4b6db2b6deaf6fd488b051cda996f23b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4784296032504312064, guid: 4b6db2b6deaf6fd488b051cda996f23b,
         type: 3}
       propertyPath: home
@@ -530,6 +550,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6361361804104484899, guid: 4b6db2b6deaf6fd488b051cda996f23b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 33c8ff7cd109a8148bd2eff1c97123f1, type: 2}
+    - target: {fileID: 6361361804104484899, guid: 4b6db2b6deaf6fd488b051cda996f23b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 33c8ff7cd109a8148bd2eff1c97123f1, type: 2}
+    - target: {fileID: 6361361804104484899, guid: 4b6db2b6deaf6fd488b051cda996f23b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[3]
+      value: 
+      objectReference: {fileID: 2100000, guid: 33c8ff7cd109a8148bd2eff1c97123f1, type: 2}
+    - target: {fileID: 6361361804104484899, guid: 4b6db2b6deaf6fd488b051cda996f23b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[4]
+      value: 
+      objectReference: {fileID: 2100000, guid: c394740994e3c494f9a70a7f09f4da49, type: 2}
+    - target: {fileID: 6361361804104484899, guid: 4b6db2b6deaf6fd488b051cda996f23b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c841ac7296d65b49a7b3ddc75884f04, type: 2}
+    - target: {fileID: 6988459322360280097, guid: 4b6db2b6deaf6fd488b051cda996f23b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6988459322764677432, guid: 4b6db2b6deaf6fd488b051cda996f23b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124580756094248588, guid: 4b6db2b6deaf6fd488b051cda996f23b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c394740994e3c494f9a70a7f09f4da49, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b6db2b6deaf6fd488b051cda996f23b, type: 3}
 --- !u!4 &362125497 stripped
@@ -1034,12 +1094,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 475941293, guid: fd82cdfcf7b26b747ad1040ac2b97322, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fd82cdfcf7b26b747ad1040ac2b97322, type: 3}
---- !u!4 &475941287 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2013703971, guid: fd82cdfcf7b26b747ad1040ac2b97322,
-    type: 3}
-  m_PrefabInstance: {fileID: 475941286}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &475941288 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8389033462752065576, guid: fd82cdfcf7b26b747ad1040ac2b97322,
@@ -1264,7 +1318,7 @@ PrefabInstance:
     - target: {fileID: 5449046106288648453, guid: 01430b9a44a4dab42b7eb1468d9be7de,
         type: 3}
       propertyPath: m_TagString
-      value: Teleporation
+      value: Teleportation
       objectReference: {fileID: 0}
     - target: {fileID: 5449046106288648455, guid: 01430b9a44a4dab42b7eb1468d9be7de,
         type: 3}
@@ -1503,6 +1557,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gold Paintball
       objectReference: {fileID: 0}
+    - target: {fileID: 2991977491976256623, guid: d51c5330dfd11443ea2d93d9a26a6bab,
+        type: 3}
+      propertyPath: m_TagString
+      value: Paintball
+      objectReference: {fileID: 0}
     - target: {fileID: 5518377775352508401, guid: d51c5330dfd11443ea2d93d9a26a6bab,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1512,7 +1571,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AttachTransform
       value: 
-      objectReference: {fileID: 475941287}
+      objectReference: {fileID: 0}
     - target: {fileID: 6804552455698982837, guid: d51c5330dfd11443ea2d93d9a26a6bab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1602,7 +1661,7 @@ PrefabInstance:
     - target: {fileID: 4721470427369922050, guid: 7c8f8f505d45ea14fb29c757f639f0e8,
         type: 3}
       propertyPath: m_TagString
-      value: Teleporation
+      value: Teleportation
       objectReference: {fileID: 0}
     - target: {fileID: 8283213857187068031, guid: 7c8f8f505d45ea14fb29c757f639f0e8,
         type: 3}
@@ -1784,6 +1843,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Black Paintball
       objectReference: {fileID: 0}
+    - target: {fileID: 2991977491976256623, guid: d51c5330dfd11443ea2d93d9a26a6bab,
+        type: 3}
+      propertyPath: m_TagString
+      value: Paintball
+      objectReference: {fileID: 0}
     - target: {fileID: 5518377775352508401, guid: d51c5330dfd11443ea2d93d9a26a6bab,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1793,7 +1857,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AttachTransform
       value: 
-      objectReference: {fileID: 475941287}
+      objectReference: {fileID: 0}
     - target: {fileID: 6804552455698982837, guid: d51c5330dfd11443ea2d93d9a26a6bab,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3238,6 +3302,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Red Paintball
       objectReference: {fileID: 0}
+    - target: {fileID: 2991977491976256623, guid: d51c5330dfd11443ea2d93d9a26a6bab,
+        type: 3}
+      propertyPath: m_TagString
+      value: Paintball
+      objectReference: {fileID: 0}
     - target: {fileID: 5518377775352508401, guid: d51c5330dfd11443ea2d93d9a26a6bab,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3247,7 +3316,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AttachTransform
       value: 
-      objectReference: {fileID: 475941287}
+      objectReference: {fileID: 0}
     - target: {fileID: 6804552455698982837, guid: d51c5330dfd11443ea2d93d9a26a6bab,
         type: 3}
       propertyPath: m_LocalPosition.x
