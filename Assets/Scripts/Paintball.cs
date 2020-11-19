@@ -21,12 +21,10 @@ public class Paintball : MonoBehaviour
         {
             carMesh.GetComponent<Renderer>().material = newMaterial;
         }
-        else if (other.gameObject.tag == "Hands")
+        else if (other.gameObject.tag == "Teleporation")
         {
-            //enable XR throw mechanic
+            Destroy(paintBall);
+            Instantiate(paintBall, positionToSave, Quaternion.identity);
         }
-            
-        Destroy(paintBall);
-        Instantiate(paintBall, positionToSave, Quaternion.identity);
     }
 }
