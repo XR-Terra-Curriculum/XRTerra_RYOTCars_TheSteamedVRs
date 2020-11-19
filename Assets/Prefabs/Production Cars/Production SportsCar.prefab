@@ -221,7 +221,7 @@ GameObject:
   - component: {fileID: 4190780250849808993}
   m_Layer: 0
   m_Name: DoorL
-  m_TagString: Untagged
+  m_TagString: Car Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -783,7 +783,7 @@ GameObject:
   - component: {fileID: 4190780250849819111}
   m_Layer: 0
   m_Name: Hood
-  m_TagString: Untagged
+  m_TagString: Car Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -878,7 +878,7 @@ GameObject:
   - component: {fileID: 4190780250849822867}
   m_Layer: 0
   m_Name: RightWing
-  m_TagString: Untagged
+  m_TagString: Car Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1333,7 +1333,7 @@ GameObject:
   - component: {fileID: 4190780250849836535}
   m_Layer: 0
   m_Name: DoorR
-  m_TagString: Untagged
+  m_TagString: Car Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2212,7 +2212,7 @@ GameObject:
   - component: {fileID: 4190780250849859021}
   m_Layer: 0
   m_Name: BumperR
-  m_TagString: Untagged
+  m_TagString: Car Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2497,7 +2497,7 @@ GameObject:
   - component: {fileID: 4190780250849860973}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Car Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3281,7 +3281,7 @@ GameObject:
   - component: {fileID: 4190780250850002801}
   m_Layer: 0
   m_Name: LeftWing
-  m_TagString: Untagged
+  m_TagString: Car Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3454,7 +3454,7 @@ GameObject:
   - component: {fileID: 4190780250850007643}
   m_Layer: 0
   m_Name: BumperF
-  m_TagString: Untagged
+  m_TagString: Car Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3744,7 +3744,7 @@ GameObject:
   - component: {fileID: 4190780250850018533}
   m_Layer: 0
   m_Name: Trunk
-  m_TagString: Untagged
+  m_TagString: Car Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4172,7 +4172,7 @@ GameObject:
   - component: {fileID: 6076597903347328001}
   m_Layer: 0
   m_Name: CarBody
-  m_TagString: Car
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

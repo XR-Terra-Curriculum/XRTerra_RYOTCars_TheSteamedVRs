@@ -137,7 +137,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c394740994e3c494f9a70a7f09f4da49, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -320,7 +320,7 @@ GameObject:
   - component: {fileID: 6988459322288216475}
   - component: {fileID: 6988459322288216474}
   m_Layer: 0
-  m_Name: Old Car
+  m_Name: Production Old Car
   m_TagString: Car
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -753,7 +753,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c394740994e3c494f9a70a7f09f4da49, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1446,7 +1446,7 @@ GameObject:
   - component: {fileID: 7313983939843275443}
   m_Layer: 0
   m_Name: SM_Body
-  m_TagString: Untagged
+  m_TagString: Car Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1491,11 +1491,11 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 33c8ff7cd109a8148bd2eff1c97123f1, type: 2}
-  - {fileID: 2100000, guid: 0bd862b50a5366e4a99223b6dd28e301, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 2100000, guid: 3c841ac7296d65b49a7b3ddc75884f04, type: 2}
-  - {fileID: 2100000, guid: 0bd862b50a5366e4a99223b6dd28e301, type: 2}
-  - {fileID: 2100000, guid: 9a31d4fce1c8eeb4281d8b53797dba86, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1716,7 +1716,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c394740994e3c494f9a70a7f09f4da49, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class EngageDisplay : MonoBehaviour
 {
 
+    private Renderer[] carBody;
     private GameObject lastCar = null;//for storing the last car to be displayed
 
     // Start is called before the first frame update
@@ -46,6 +47,19 @@ public class EngageDisplay : MonoBehaviour
             GetComponent<AudioSource>().Play();
             other.GetComponent<CarSounds>().playEngine();
             
+        }
+        else if (other.tag == "Paintball")
+        {
+            carBody = lastCar.GetComponentsInChildren<Renderer>();
+            foreach(Renderer carBody in other.GetComponentsInChildren<Renderer>())
+            {
+                if (carBody.tag == "Car Body")
+                {
+                    carBody.material = other.gameObject.GetComponent<Paintball>().newMaterial;
+                }
+            }
+            Destroy(other.gameObject);
+            Instantiate(other.gameObject, other.gameObject.GetComponent<Paintball>().positionToSave, Quaternion.identity);
         }
 
     }

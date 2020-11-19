@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Paintball : MonoBehaviour
 {
-    private Material newMaterial;
+    public Material newMaterial;
     public GameObject carMesh;
     public GameObject paintBall;
-    Vector3 positionToSave;
+    public Vector3 positionToSave;
 
     void Start()
     {
@@ -17,11 +17,7 @@ public class Paintball : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Car")
-        {
-            carMesh.GetComponent<Renderer>().material = newMaterial;
-        }
-        else if (other.gameObject.tag == "Teleporation")
+        if (other.gameObject.tag == "Teleporation")
         {
             Destroy(paintBall);
             Instantiate(paintBall, positionToSave, Quaternion.identity);

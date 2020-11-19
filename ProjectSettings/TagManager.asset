@@ -17,6 +17,7 @@ TagManager:
   - Green
   - Blue
   - Teleporation
+  - Car Body
   layers:
   - Default
   - TransparentFX
