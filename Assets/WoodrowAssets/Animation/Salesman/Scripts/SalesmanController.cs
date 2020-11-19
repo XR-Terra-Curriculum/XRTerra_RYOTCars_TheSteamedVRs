@@ -18,6 +18,7 @@ public class SalesmanController : MonoBehaviour
     private int recentSequence;
     private int nextSequence;
     public bool mute = false;
+    private int lastTry;
     void Awake()
         {
             if (instance == null)
@@ -53,6 +54,29 @@ public class SalesmanController : MonoBehaviour
     /// <param name="num"></param>
     public void playSequence(int num)
     {
+        lastTry = num;
+        if (num == 0)
+        {
+            ComputerText.instance.setIntro();
+        }
+        else if (num == 1)
+        {
+            ComputerText.instance.setSedan();
+        }
+        else if (num == 2)
+        {
+            ComputerText.instance.setSport();
+        }
+        else if (num == 4)
+        {
+            ComputerText.instance.setOld();
+        }
+        else if (num == 5)
+        {
+            ComputerText.instance.setFuture();
+        }
+
+
         if (!speechList[num].complete && !mute)
         {
             for (int i = 0; i < speechList.Length; i++)
@@ -116,6 +140,14 @@ public class SalesmanController : MonoBehaviour
     public void toggleMute()
     {
         mute = !mute;
+        if (mute)
+        {
+            stopAllSequence();
+        }
+        else
+        {
+            playSequence(lastTry);
+        }
     }
 
 
@@ -127,7 +159,6 @@ public class SalesmanController : MonoBehaviour
 
     public void queueLast()
     {
-        
         queueNext = true;
         nextSequence = recentSequence;
         playSequence(7);
