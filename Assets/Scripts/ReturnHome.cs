@@ -18,6 +18,7 @@ public class ReturnHome : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        //Debug.Log(other.tag);
         //if the object is a car and not currently following a point, turn on followpoint towards the display area
         if (other.tag == "Car" && other.GetComponent<FollowPoint>().enabled == false)
         {
@@ -25,6 +26,13 @@ public class ReturnHome : MonoBehaviour
             other.transform.localScale = new Vector3(1,1,1);
             other.GetComponent<FollowPoint>().SendHome();
         }
+
+        if(other.tag == "Paintball")
+        {
+            other.GetComponent<Paintball>().reposition();
+        }
+
+
 
     }
 }

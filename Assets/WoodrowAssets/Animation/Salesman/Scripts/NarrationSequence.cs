@@ -86,7 +86,7 @@ public class NarrationSequence : MonoBehaviour
     {
         if (localAnim != null && acting)
         {
-            Debug.Log("Finished anim, back to Idle");
+            //Debug.Log("Finished anim, back to Idle");
             localSpeaker.Stop();
             localAnim.SetBool(animationName, false);
             acting = false;

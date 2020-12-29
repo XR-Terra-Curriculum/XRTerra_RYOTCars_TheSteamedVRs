@@ -55,6 +55,7 @@ public class SalesmanController : MonoBehaviour
     public void playSequence(int num)
     {
         lastTry = num;
+        /*
         if (num == 0)
         {
             ComputerText.instance.setIntro();
@@ -75,7 +76,7 @@ public class SalesmanController : MonoBehaviour
         {
             ComputerText.instance.setFuture();
         }
-
+        */
 
         if (!speechList[num].complete && !mute)
         {

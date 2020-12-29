@@ -23,8 +23,7 @@ public class EngageDisplay : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-
-        Debug.Log(other.tag);
+        //Debug.Log(other.tag);
         //if the object is a car and not currently following a point, turn on followpoint towards the display area
         if (other.tag == "Car" && other.GetComponent<FollowPoint>().enabled == false)
         {
@@ -53,31 +52,30 @@ public class EngageDisplay : MonoBehaviour
         }
         else if (other.tag == "Paintball")
         {
-            //Debug.Log("Is paint ball!");
             carBody = lastCar.GetComponentsInChildren<MeshRenderer>();
             foreach(MeshRenderer carBodyPart in carBody)
             {
-               //Debug.Log("meshrenderer in list");
                 if (carBodyPart.gameObject.tag == "Car Body")
                 {
-                    //Debug.Log("Tag is carbody, applying material " + other.gameObject.GetComponent<Paintball>().newMaterial);
-                    //carBodyPart.material = other.gameObject.GetComponent<Paintball>().newMaterial;
-                    newPaint = new Material[100];
+                    newPaint = new Material[carBodyPart.materials.Length];
                     for (int i = 0; i < carBodyPart.materials.Length; i++)
                     {
-                        //Debug.Log("count a material!");
-                        //carBodyPart.materials[i] = other.gameObject.GetComponent<Paintball>().newMaterial;
-                        newPaint[i] = other.gameObject.GetComponent<Paintball>().newMaterial;
+                        //Debug.Log("I = " + i + ", carBodyPart = " + carBodyPart.ToString());
+                        if (carBodyPart.gameObject.GetComponent<PaintList>().partList[i])
+                        {
+                            newPaint[i] = other.gameObject.GetComponent<Paintball>().newMaterial;
+                        }
+                        else
+                        {
+                            if(carBodyPart.materials[i]!=null)
+                                newPaint[i] = carBodyPart.materials[i];
+                        }
                     }
 
                     carBodyPart.materials = newPaint;
                 }
             }
-            /*
-            Destroy(other.gameObject);
-            Instantiate(other.gameObject, other.gameObject.GetComponent<Paintball>().positionToSave, Quaternion.identity);
-            */
-           other.transform.position = other.GetComponent<Paintball>().positionToSave;
+            other.transform.position = other.GetComponent<Paintball>().positionToSave;
            other.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
         }
 

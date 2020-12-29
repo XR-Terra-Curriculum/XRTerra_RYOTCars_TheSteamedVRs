@@ -17,14 +17,23 @@ public class Paintball : MonoBehaviour
 
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "Teleportation")
+        /*
+        if (other.gameObject.tag == "Teleportation" || other.gameObject.tag == "Respawn")
         {
-            /*
+            
             Destroy(gameObject);
             Instantiate(paintBall, positionToSave, Quaternion.identity);
-            */
-            gameObject.transform.position = positionToSave;
-            gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0f,0f,0f);
+            
+            reposition();
         }
+        */
+    
+}
+
+
+    public void reposition()
+    {
+        gameObject.transform.position = positionToSave;
+        gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0f, 0f, 0f);
     }
 }
